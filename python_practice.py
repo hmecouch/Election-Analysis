@@ -71,3 +71,46 @@ for county_dict in voting_data:
 for county_dict in voting_data:
     print(county_dict['county'])
 
+#f-string example
+
+print(f"{counties[1]} IS A BIG CITY" )
+# variables and expressions go in curly braces
+
+
+for county, voters in counties_dict.items():
+    print(f"{county} county has {voters} registered voters")
+
+#f strings can print multiple string or lines to the screen
+
+candidate_votes = int(input("how many votes did the candidate get? "))
+
+total_votes = int(input("what is the total number of votes? "))
+
+message_to_candidate = (
+    f"You recieved {candidate_votes:,} votes. "
+    f"The total votes was {total_votes:,}. "
+    f"You recieved {candidate_votes / total_votes * 100:.2f}% of the total votes.")
+
+print(message_to_candidate)
+
+#format the floating point
+# f'{value:{width}.{precision}}' decimal places
+# f'{value:{width},.{precision}}' adds comma for thousands seperator
+
+#skill drill
+
+for county, voters in counties_dict.items():
+    print(f"{county} county has {voters:,} registered voters.")
+
+for i in range(len(voting_data)):
+    print(f"{voting_data[i]['county']} county has {voting_data[i]['registered_voters']:,} voters.")
+                
+        
+
+        
+
+    
+
+        
+
+
